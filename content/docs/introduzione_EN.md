@@ -8,7 +8,7 @@ hero: /window_design.png
 section: Introduction
 sectionOrder: 1
 order: 1
-tag: introduction
+tag: introduzione
 ---
 
 # Welcome to ButterflyOS
