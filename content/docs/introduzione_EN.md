@@ -21,25 +21,25 @@ ButterflyOS ::Clock:: is designed to be set up in just a few minutes. Use this g
 - Colored blocks highlight tips and warnings.
 - Everything is written in Markdown, so you can edit the files locally and publish them with a commit.
 
-> - **Info**  
+>-**Info**
 > Update the documentation every time you change a procedure: keeping the guide aligned with reality reduces repeated support requests.
 
-> **Warning**  
+> **Warning**
 > Update the documentation every time you change a procedure: keeping the guide aligned with reality reduces repeated support requests.
 
-> **Error**  
+> **Error**
 > Update the documentation every time you change a procedure: keeping the guide aligned with reality reduces repeated support requests.
 
-> **Tip**  
+> **Tip**
 > Update the documentation every time you change a procedure: keeping the guide aligned with reality reduces repeated support requests.
 
-> **Solution**  
+> **Solution**
 > Update the documentation every time you change a procedure: keeping the guide aligned with reality reduces repeated support requests.
 
-> **Bug**  
+> **Bug**
 > Update the documentation every time you change a procedure: keeping the guide aligned with reality reduces repeated support requests.
 
-> **Beta Feature**  
+> **Beta Experiment**
 > Update the documentation every time you change a procedure: keeping the guide aligned with reality reduces repeated support requests.
 
 ## Main resources
