@@ -7,9 +7,10 @@ import type { DocNavSection } from "@/config/docs";
 
 interface DocsMobileNavProps {
   sections: DocNavSection[];
+  lang: string;
 }
 
-export function DocsMobileNav({ sections }: DocsMobileNavProps) {
+export function DocsMobileNav({ sections, lang }: DocsMobileNavProps) {
   const router = useRouter();
   const pathname = usePathname();
   const activeSlug =
@@ -32,7 +33,7 @@ export function DocsMobileNav({ sections }: DocsMobileNavProps) {
   );
 
   return (
-    <div className="flex flex-col gap-2 rounded-lg border border-border bg-card px-4 py-3 md:hidden">
+    <div className="mt-4 flex flex-col gap-2 rounded-lg border border-border bg-card px-4 py-3 md:hidden">
       <label className="text-xs font-medium uppercase text-muted-foreground">
         Seleziona un argomento
       </label>
@@ -42,7 +43,7 @@ export function DocsMobileNav({ sections }: DocsMobileNavProps) {
           const next = event.target.value;
           setValue(next);
           if (next) {
-            router.push(`/guide/${next}`);
+            router.push(`/guide/${lang}/${next}`);
           }
         }}
         className="h-10 rounded-md border border-input bg-background px-3 text-sm outline-none transition focus:border-border focus:ring-2 focus:ring-ring"

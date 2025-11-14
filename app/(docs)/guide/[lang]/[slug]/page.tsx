@@ -48,14 +48,16 @@ export default async function DocPage({ params }: DocPageProps) {
         <section className="rounded-2xl border border-border bg-card px-6 py-12 shadow-sm sm:px-10">
           <div className="space-y-4">
             {doc.hero ? (
-              <div className="overflow-hidden rounded-xl border border-border bg-muted/30">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={doc.hero}
-                  alt={doc.title}
-                  className="h-52 w-full object-cover"
-                  loading="lazy"
-                />
+              <div className="block">
+                <div className="relative w-full overflow-hidden rounded-xl border border-border bg-muted/30" style={{ aspectRatio: "3 / 1" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={doc.hero}
+                    alt={doc.title}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             ) : null}
             <Badge
