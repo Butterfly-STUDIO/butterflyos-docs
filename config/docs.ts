@@ -1,9 +1,13 @@
-import { BookOpen, Headset, MessageCircleHeart } from "lucide-react";
+import { BookOpen, Headset, MessageCircleHeart, Send, UserRoundSearch, SquarePlus, CirclePlus } from "lucide-react";
 
 export const docIcons = {
   bookOpen: BookOpen,
   headset: Headset,
   messageCircleHeart: MessageCircleHeart,
+  send: Send,
+  userRoundSearch: UserRoundSearch,
+  squarePlus: SquarePlus,
+  circlePlus: CirclePlus,
 } as const;
 
 export type DocIconName = keyof typeof docIcons;

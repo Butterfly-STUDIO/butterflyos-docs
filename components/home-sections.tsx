@@ -1,13 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { LanguageHydrator } from "@/components/language-context";
-import { Badge } from "@/components/ui/badge";
 import { FALLBACK_LANGUAGE, docIcons } from "@/config/docs";
 import { getDocNavigation } from "@/lib/docs";
 import { cn } from "@/lib/utils";
 import {
-  getTagClasses,
   getTagHoverBorderClasses,
+  getTagImage,
   getTagLabel,
 } from "@/config/doc-tags";
 
@@ -61,23 +61,22 @@ export function HomeSections({ lang, languages }: HomeSectionsProps) {
         {sections.map((section) => {
           const sectionSlug =
             section.items[0]?.slug ?? section.title.toLowerCase();
-          const badgeLabel = getTagLabel(sectionSlug, lang);
-          const badgeClasses = getTagClasses(sectionSlug);
           const hoverBorder = getTagHoverBorderClasses(sectionSlug);
+          const sectionImage = getTagImage(sectionSlug);
+          const sectionLabel = getTagLabel(sectionSlug, lang);
 
           return (
             <section key={section.title} className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Badge
-                  className={cn(
-                    "rounded-full border-none px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-wide",
-                    badgeClasses,
-                  )}
-                >
-                  {badgeLabel}
-                </Badge>
+              <div className="flex items-center gap-4">
+                <Image
+                  src={sectionImage}
+                  width={64}
+                  height={64}
+                  alt={`${section.title} section`}
+                  className="h-16 w-16 rounded-2xl object-contain"
+                />
                 <h2 className="text-2xl font-semibold text-foreground">
-                  {section.title}
+                  {sectionLabel}
                 </h2>
               </div>
               <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">

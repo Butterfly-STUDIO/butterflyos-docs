@@ -5,10 +5,10 @@ title: Seguici sui Social
 description: Canali ufficiali
 icon: messageCircleHeart
 hero: /logo.png
-section: Contatti
+section: Contattaci
 sectionOrder: 2
 order: 2
-tag: contatti
+tag: contattaci
 ---
 
 # Canali ufficiali ButterflyOS
